@@ -1,19 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neel Patel's Website</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Mate</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: green;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid green;
+            padding: 10px;
+            text-align: left;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: red;
+            color: white;
+        }
+        /* Image Styling */
+        img {
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 10px auto; 
+            border-radius: 10px; 
+        }
+    </style>
 </head>
 <body>
-  <div class="container text-center py-5">
-    <h1>Welcome to My Website</h1>
-    <p class="lead">This is a simple Bootstrap-based site created for my project.</p>
-    <img src="https://www.epo.org/sites/default/files/styles/ratio_16_9/public/2023-05/AdobeStock_266056885_new_1920x1080.jpg?itok=o1GLBuEj" alt="City Skyline" class="img-fluid rounded mb-4" style="max-width: 400px;" />
-    <p><strong>Made by Neel Patel</strong></p>
-  </div>
+    <header>
+        <h1><u>Welcome to Market Mate</u></h1>
+        <h3>Made by Neel Patel</h3>
+        <p><i>Buy & Sell Items Easily</i></p>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Sell.html">Sell</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About <u>Market Mate</u></h2>
+        <p><strong>Market Mate</strong> is your go-to platform for buying and selling a variety of products. Whether you're looking for <b>electronics</b>, <i>fashion</i>, or <u>home essentials</u>, we connect buyers and sellers.</p>
+        
+        <img src="https://images.unsplash.com/photo-1561069934-eee225952461?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Market Mate Platform" style="width: 50%;">
+    </section>
+    
+    <section id="products">
+        <h2>Popular Categories</h2>
+        <ul>
+            <li><b>Electronics</b> – Phones, Laptops, Accessories</li>
+            <li><b>Fashion</b> – Clothing, Shoes, Accessories</li>
+            <li><b>Home Essentials</b> – Furniture, Kitchenware, Decor</li>
+        </ul>
+    </section>
+    
+    <section id="pricing">
+        <h2>Pricing & Deals</h2>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Starting Price</th>
+                <th>Discounts</th>
+            </tr>
+            <tr>
+                <td>Electronics</td>
+                <td>$50</td>
+                <td>Up to 30% off</td>
+            </tr>
+            <tr>
+                <td>Fashion</td>
+                <td>$10</td>
+                <td>Buy 1 Get 1 Free</td>
+            </tr>
+            <tr>
+                <td>Home Essentials</td>
+                <td>$20</td>
+                <td>Seasonal Discounts</td>
+            </tr>
+        </table>
+    </section>
+    
+    <section id="sell">
+        <h2>Sell Your Items</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
 
-  <script src="js/bootstrap.bundle.min.js"></script>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="4" required></textarea><br><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone"><br><br>
+
+            <label for="item">Item to Sell:</label><br>
+            <input type="text" id="item" name="item" required><br><br>
+
+            <label for="category">Select Category:</label><br>
+            <select id="category" name="category">
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="home">Home Essentials</option>
+            </select><br><br>
+
+            <label>Item Condition:</label><br>
+            <input type="radio" id="new" name="condition" value="new" checked>
+            <label for="new">New</label>
+            <input type="radio" id="used" name="condition" value="used">
+            <label for="used">Used</label><br><br>
+
+            <label>Additional Features:</label><br>
+            <input type="checkbox" id="warranty" name="extras" value="warranty">
+            <label for="warranty">Warranty Included</label>
+            <input type="checkbox" id="free-shipping" name="extras" value="free-shipping">
+            <label for="free-shipping">Free Shipping</label><br><br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </section>
 </body>
 </html>
